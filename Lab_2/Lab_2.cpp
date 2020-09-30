@@ -23,16 +23,16 @@ public:
     double Norm() override { return sqrt((NumberX * NumberX) + (NumberY * NumberY)); }
     string Fourth()
     {
-        if (NumberX > 0 && NumberY > 0) 
+        if (NumberX > 0 && NumberY > 0)
             return "Первая четверть";
 
-        else if (NumberX < 0 && NumberY > 0) 
+        else if (NumberX < 0 && NumberY > 0)
             return "Вторая четверть";
 
-        else if (NumberX < 0 && NumberY < 0) 
+        else if (NumberX < 0 && NumberY < 0)
             return "Третья четверть";
 
-        else if (NumberX > 0 && NumberY < 0) 
+        else if (NumberX > 0 && NumberY < 0)
             return "Четвертая четверть";
 
         else return "Не принадлежит";
@@ -44,8 +44,9 @@ int main()
 {
     setlocale(LC_ALL, "rus");
     Number* number = new Number();
-    number-> Input(46);
-    Point* point = new Point(10, 8);
+    number->Input(25);
+    Point* point = new Point(15, 20);
+    cout << "Число в квадрате:" << number->Norm() << endl;
     cout << "Переопределенный:" << point->Norm() << endl;
     cout << "Базовый:" << point->Number::Norm() << endl;
     cout << "В какой четверти: " << point->Fourth() << endl;
